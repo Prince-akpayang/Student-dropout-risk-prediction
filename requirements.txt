@@ -1,0 +1,17 @@
+# R packages required for this project
+required_packages <- c(
+  "dplyr",
+  "readr",
+  "caret",
+  "pROC",
+  "ggplot2",
+  "shiny"
+)
+
+installed <- rownames(installed.packages())
+
+for (pkg in required_packages) {
+  if (!pkg %in% installed) {
+    install.packages(pkg)
+  }
+}
